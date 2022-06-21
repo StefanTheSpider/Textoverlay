@@ -1,0 +1,68 @@
+* {
+  font-size: 18px;
+  font-family: 'Poppins';
+  line-height: 2rem;
+}
+
+
+
+.li-1:hover {
+  font-weight: 500;
+}
+
+.li-2:hover {
+  font-weight: 500;
+}
+
+.li-3:hover {
+  font-weight: 500;
+}
+
+
+.menü-overlap {
+  margin: 0 0 1px 0;
+  padding: 0;
+}
+
+.menü-overlap > li {
+  /* text-decoration: none; */
+  display: inline-block;
+  margin-right: 2rem;
+  align-items: center;
+  /* border: 2px solid black; */
+  padding: 1rem 2rem;
+  position: relative
+}
+
+/* .container-description {
+  margin: 0;
+  padding: 0;
+  border: 2px solid black;
+  position: relative;
+} */
+
+.hidden {
+  display: none;
+}
+
+
+.leistungen {
+position: absolute;
+padding: 5px;
+}
+
+.hinweise {
+position: absolute;
+padding: 5px;
+}
+
+.hotels {
+position: absolute;
+padding: 5px;
+}
+
+.textDecoration{
+  font-weight: 500;
+  text-decoration: underline 4px #41b083;
+  text-underline-offset: 3px;
+}
