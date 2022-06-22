@@ -1,0 +1,159 @@
+<div class="container-description">
+  <ul class="menü-overlap">
+    <li class="li-1 textDecoration">Leistungen</li>
+    <li class="li-2">Hotelbeschreibung</li>
+    <li class="li-3">Hinweise</li>
+  </ul>
+  <div class="leistungen index">
+    <p>Leistungen: <br><br>
+      <!--  ES DARF NUR       -->
+      <!--  DER TEXT UNTEN    -->
+      <!--  GEÄNDERT WERDEN   -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
+      molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
+      commodi illo?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
+      molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
+      commodi illo?
+      <!--  ES DARF NUR       -->
+      <!--  DER TEXT OBEN     -->
+      <!--  GEÄNDERT WERDEN   -->
+    </p>
+  </div>
+  <div class="hinweise hidden">
+    <p>Hinweise: <br><br>
+      <!--  ES DARF NUR       -->
+      <!--  DER TEXT UNTEN    -->
+      <!--  GEÄNDERT WERDEN   -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
+      molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
+      commodi illo?
+      <!--  ES DARF NUR       -->
+      <!--  DER TEXT OBEN     -->
+      <!--  GEÄNDERT WERDEN   -->
+    </p>
+  </div>
+  <div class="hotels hidden">
+    <p>Hotelbeschreibung: <br><br>
+      <!--  ES DARF NUR       -->
+      <!--  DER TEXT UNTEN    -->
+      <!--  GEÄNDERT WERDEN   -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
+      molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
+      commodi illo?
+      <!--  ES DARF NUR       -->
+      <!--  DER TEXT OBEN     -->
+      <!--  GEÄNDERT WERDEN   -->
+    </p>
+  </div>
+</div>
+<br><br><br><br><br>
+<style>
+  * {
+    font-size: 18px;
+    font-family: 'Poppins';
+    line-height: 2rem;
+  }
+
+  .description-text {
+    margin: 30px;
+    padding: 20px;
+  }
+
+  .li-1:hover {
+    font-weight: 500;
+  }
+
+  .li-2:hover {
+    font-weight: 500;
+  }
+
+  .li-3:hover {
+    font-weight: 500;
+  }
+
+
+  .menü-overlap {
+    margin: 0 0 1px 0;
+    padding: 0;
+  }
+
+  .menü-overlap>li {
+
+    display: inline-block;
+    margin-right: 2rem;
+    align-items: center;
+
+    padding: 0 2rem !important;
+    position: relative
+  }
+
+
+  .hidden {
+    display: none;
+  }
+
+
+  .leistungen {
+    padding: 20px;
+  }
+
+  .hinweise {
+    padding: 20px;
+  }
+
+  .hotels {
+    padding: 20px;
+  }
+
+  .textDecoration {
+    font-weight: 500;
+    text-decoration: underline 4px #41b083;
+    text-underline-offset: 3px;
+  }
+</style>
+<script>
+  const leistungenBtn = document.querySelector(`.li-1`);
+  const hotelBtn = document.querySelector(`.li-2`);
+  const hinweiseBtn = document.querySelector(`.li-3`);
+
+  const leistungen = document.querySelector(`.leistungen`);
+  const hotel = document.querySelector(`.hotels`);
+  const hinweise = document.querySelector(`.hinweise`);
+
+  const overlapL = function () {
+    leistungenBtn.classList.add(`textDecoration`);
+    leistungen.classList.remove(`hidden`);
+    hotel.classList.add(`hidden`);
+    hotelBtn.classList.remove(`hidden`);
+    hotelBtn.classList.remove(`textDecoration`);
+    hinweise.classList.add(`hidden`);
+    hinweiseBtn.classList.remove(`hidden`);
+    hinweiseBtn.classList.remove(`textDecoration`);
+  }
+
+  const overlapHotel = function () {
+    leistungen.classList.add(`hidden`);
+    leistungenBtn.classList.remove(`textDecoration`);
+    hotelBtn.classList.add(`textDecoration`);
+    hinweiseBtn.classList.remove(`textDecoration`);
+    hotel.classList.remove(`hidden`);
+    hinweise.classList.add(`hidden`);
+  }
+
+  const overlapH = function () {
+    leistungen.classList.add(`hidden`);
+    leistungenBtn.classList.remove(`textDecoration`);
+    hotel.classList.add(`hidden`);
+    hotelBtn.classList.remove(`textDecoration`);
+    hinweiseBtn.classList.add(`textDecoration`);
+    hinweise.classList.remove(`hidden`);
+  }
+
+  leistungenBtn.addEventListener(`click`, overlapL);
+  hinweiseBtn.addEventListener(`click`, overlapH);
+  hotelBtn.addEventListener(`click`, overlapHotel);
+
+
+
+</script>

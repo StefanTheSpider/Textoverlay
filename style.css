@@ -4,7 +4,9 @@
   line-height: 2rem;
 }
 
-
+section {
+  border: 2px solid #000;
+}
 
 .li-1:hover {
   font-weight: 500;
@@ -47,18 +49,18 @@
 
 
 .leistungen {
-position: absolute;
-padding: 5px;
+/* position: absolute; */
+padding: 20px;
 }
 
 .hinweise {
-position: absolute;
-padding: 5px;
+/* position: absolute; */
+padding: 20px;
 }
 
 .hotels {
-position: absolute;
-padding: 5px;
+/* position: absolute; */
+padding: 20px;
 }
 
 .textDecoration{
