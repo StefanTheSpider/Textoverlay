@@ -5,29 +5,90 @@
     <li class="li-3">Hinweise</li>
   </ul>
   <div class="leistungen index">
-    <p>Leistungen: <br><br>
-      <!--  ES DARF NUR       -->
-      <!--  DER TEXT UNTEN    -->
-      <!--  GEÄNDERT WERDEN   -->
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
-      molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
-      commodi illo?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
-      molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
-      commodi illo?
-      <!--  ES DARF NUR       -->
-      <!--  DER TEXT OBEN     -->
-      <!--  GEÄNDERT WERDEN   -->
-    </p>
+
+
+    <ul>
+      <li class="col-1">
+        <span class="leistung-aufzählung">
+          Hotel:
+        </span>
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT UNTEN    -->
+        <!--  GEÄNDERT WERDEN   -->
+
+
+        3x Übernachtung im Standard Doppelzimmer inklusive Frühstück im 4 Sterne-Hotel "Mercure Hotel Köln
+        Belfortstrasse"
+
+
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT OBEN     -->
+        <!--  GEÄNDERT WERDEN   -->
+      </li>
+      <li class="col-1">
+        <span class="leistung-aufzählung">
+          Tickets:
+        </span>
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT UNTEN    -->
+        <!--  GEÄNDERT WERDEN   -->
+
+
+        Kombi-Sitzplatz-Ticket Kategorie 2 (Erwachsene) gültig am 15.04.2023 und 16.04.2023
+
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT OBEN     -->
+        <!--  GEÄNDERT WERDEN   -->
+      </li>
+      <li class="col-1">
+        <span class="leistung-aufzählung">
+          Reisezeitraum:
+        </span>
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT UNTEN    -->
+        <!--  GEÄNDERT WERDEN   -->
+
+
+        14.04.2023 - 17.04.2023
+
+
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT OBEN     -->
+        <!--  GEÄNDERT WERDEN   -->
+      </li>
+
+
+      <li class="col-1">
+        <span class="leistung-aufzählung">
+          Anreise:
+        </span>
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT UNTEN    -->
+        <!--  GEÄNDERT WERDEN   -->
+
+
+        Eigenanreise am 14.04.2023
+
+
+        <!--  ES DARF NUR       -->
+        <!--  DER TEXT OBEN     -->
+        <!--  GEÄNDERT WERDEN   -->
+      </li>
+    </ul>
+
   </div>
   <div class="hinweise hidden">
     <p>Hinweise: <br><br>
       <!--  ES DARF NUR       -->
       <!--  DER TEXT UNTEN    -->
       <!--  GEÄNDERT WERDEN   -->
+
+
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
       molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
       commodi illo?
+
+
       <!--  ES DARF NUR       -->
       <!--  DER TEXT OBEN     -->
       <!--  GEÄNDERT WERDEN   -->
@@ -38,9 +99,13 @@
       <!--  ES DARF NUR       -->
       <!--  DER TEXT UNTEN    -->
       <!--  GEÄNDERT WERDEN   -->
+
+
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima voluptate blanditiis, minus rem,
       molestiae ipsa quas officia ducimus libero, similique voluptatem porro hic perferendis laudantium beatae natus
       commodi illo?
+
+
       <!--  ES DARF NUR       -->
       <!--  DER TEXT OBEN     -->
       <!--  GEÄNDERT WERDEN   -->
@@ -49,10 +114,15 @@
 </div>
 <br><br><br><br><br>
 <style>
-  * {
-    font-size: 18px;
-    font-family: 'Poppins';
-    line-height: 2rem;
+  .leistung-aufzählung {
+    text-decoration: underline 2px #41b083;
+    text-underline-offset: 6px;
+    margin-right: 0.5rem;
+
+  }
+
+  .col-1 {
+    margin-bottom: 1.5rem;
   }
 
   .description-text {
@@ -62,14 +132,17 @@
 
   .li-1:hover {
     font-weight: 500;
+    cursor: pointer;
   }
 
   .li-2:hover {
     font-weight: 500;
+    cursor: pointer;
   }
 
   .li-3:hover {
     font-weight: 500;
+    cursor: pointer;
   }
 
 
@@ -83,7 +156,7 @@
     display: inline-block;
     margin-right: 2rem;
     align-items: center;
-
+    font-size: 1.2rem;
     padding: 0 2rem !important;
     position: relative
   }
@@ -111,49 +184,25 @@
     text-decoration: underline 4px #41b083;
     text-underline-offset: 3px;
   }
+
+  @media (max-width: 425px) {
+    .leistungen>ul {
+      font-size: 12px;
+    }
+
+    .menü-overlap {
+      text-align: center;
+    }
+
+    .li-1,
+    .li-2,
+    .li-3 {
+      padding: 1rem;
+      margin: .5rem;
+      border: 2px solid #000;
+      text-decoration: none;
+      color: #fff;
+      background-color: #41b083;
+    }
+  }
 </style>
-<script>
-  const leistungenBtn = document.querySelector(`.li-1`);
-  const hotelBtn = document.querySelector(`.li-2`);
-  const hinweiseBtn = document.querySelector(`.li-3`);
-
-  const leistungen = document.querySelector(`.leistungen`);
-  const hotel = document.querySelector(`.hotels`);
-  const hinweise = document.querySelector(`.hinweise`);
-
-  const overlapL = function () {
-    leistungenBtn.classList.add(`textDecoration`);
-    leistungen.classList.remove(`hidden`);
-    hotel.classList.add(`hidden`);
-    hotelBtn.classList.remove(`hidden`);
-    hotelBtn.classList.remove(`textDecoration`);
-    hinweise.classList.add(`hidden`);
-    hinweiseBtn.classList.remove(`hidden`);
-    hinweiseBtn.classList.remove(`textDecoration`);
-  }
-
-  const overlapHotel = function () {
-    leistungen.classList.add(`hidden`);
-    leistungenBtn.classList.remove(`textDecoration`);
-    hotelBtn.classList.add(`textDecoration`);
-    hinweiseBtn.classList.remove(`textDecoration`);
-    hotel.classList.remove(`hidden`);
-    hinweise.classList.add(`hidden`);
-  }
-
-  const overlapH = function () {
-    leistungen.classList.add(`hidden`);
-    leistungenBtn.classList.remove(`textDecoration`);
-    hotel.classList.add(`hidden`);
-    hotelBtn.classList.remove(`textDecoration`);
-    hinweiseBtn.classList.add(`textDecoration`);
-    hinweise.classList.remove(`hidden`);
-  }
-
-  leistungenBtn.addEventListener(`click`, overlapL);
-  hinweiseBtn.addEventListener(`click`, overlapH);
-  hotelBtn.addEventListener(`click`, overlapHotel);
-
-
-
-</script>

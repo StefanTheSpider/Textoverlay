@@ -1,70 +1,104 @@
-* {
-  font-size: 18px;
-  font-family: 'Poppins';
-  line-height: 2rem;
-}
+.menü-overlap>li {
 
-section {
-  border: 2px solid #000;
-}
-
-.li-1:hover {
-  font-weight: 500;
-}
-
-.li-2:hover {
-  font-weight: 500;
-}
-
-.li-3:hover {
-  font-weight: 500;
-}
-
-
-.menü-overlap {
-  margin: 0 0 1px 0;
-  padding: 0;
-}
-
-.menü-overlap > li {
-  /* text-decoration: none; */
   display: inline-block;
   margin-right: 2rem;
   align-items: center;
-  /* border: 2px solid black; */
-  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  padding: 0 2rem !important;
   position: relative
 }
 
-/* .container-description {
-  margin: 0;
-  padding: 0;
-  border: 2px solid black;
-  position: relative;
-} */
+@media (max-width: 425px) {
 
-.hidden {
-  display: none;
+  .menü-overlap {
+    text-align: center;
+  }
+
+  .menü-overlap > li {
+width: 90%;
+  }
 }
 
+  .leistung-aufzählung {
+    text-decoration: underline 2px #41b083;
+    text-underline-offset: 6px;
+    margin-right: 0.5rem;
 
-.leistungen {
-/* position: absolute; */
-padding: 20px;
-}
+  }
 
-.hinweise {
-/* position: absolute; */
-padding: 20px;
-}
+  .col-1 {
+    margin-bottom: 1.5rem;
+  }
 
-.hotels {
-/* position: absolute; */
-padding: 20px;
-}
+  .description-text {
+    margin: 30px;
+    padding: 20px;
+  }
 
-.textDecoration{
-  font-weight: 500;
-  text-decoration: underline 4px #41b083;
-  text-underline-offset: 3px;
-}
+  .li-1 {
+    font-size: 2rem;
+  }
+
+  .li-1:hover {
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .li-2:hover {
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .li-3:hover {
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+
+  .menü-overlap {
+    margin: 0 0 1px 0;
+    padding: 0;
+  }
+
+
+
+
+  .hidden {
+    display: none;
+  }
+
+
+  .leistungen {
+    padding: 20px;
+  }
+
+  .hinweise {
+    padding: 20px;
+  }
+
+  .hotels {
+    padding: 20px;
+  }
+
+  .textDecoration {
+    font-weight: 500;
+    text-decoration: underline 4px #41b083;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 425px) {
+    .leistungen>ul {
+      font-size: 12px;
+    }
+
+    .li-1,
+    .li-2,
+    .li-3 {
+      padding: 1rem;
+      margin: .5rem;
+      border: 2px solid #000;
+      text-decoration: none;
+      color: #fff;
+      background-color: #41b083;
+    }
+  }
