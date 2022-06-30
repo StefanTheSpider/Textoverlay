@@ -1,3 +1,5 @@
+
+
 .text-uberschrift {
   font-size: 1.2rem;
 }
@@ -6,6 +8,7 @@
 
   display: inline-block;
   margin-right: 2rem;
+  margin-bottom: .2rem;
   align-items: center;
   font-size: 1.2rem;
   padding: 0 2rem !important;
@@ -16,11 +19,71 @@
 
   .menü-overlap {
     text-align: center;
+    width: 90%;
   }
 
   .menü-overlap > li {
 width: 90%;
   }
+}
+
+.background {
+  background-color: #F7F7F7;
+  position: relative;
+}
+
+.upper-line {
+  height: 1px;
+  background-color: #000;
+  margin: 0 32px;
+}
+
+.under-line {
+  height: 1px;
+  background-color: #000;
+  margin: 0 20px;
+}
+
+.corona {
+  background-color: #f7f7f7;
+  margin-top: 0;
+  padding-left: 2rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: self-start;
+
+}
+
+.corona-box-line {
+  width: 99%;
+margin-bottom: 2rem;
+  background-color: #41b083;
+}
+
+.corona-box {
+  /* width: 70%; */
+  height: 100%;
+  margin-left: .2rem;
+  padding-left: 1rem;
+  background-color: #F7F7F7;
+}
+
+.corona-1 > p {
+  margin-top: 0;
+}
+
+.corona-2 > p {
+  margin-bottom: 0;
+}
+
+.corona-1 {
+  padding-top: .5rem;
+  /* text-align: center; */
+}
+
+.corona-2 {
+  /* padding: .5rem; */
+  margin-bottom: 1rem;
 }
 
   .leistung-aufzählung {
@@ -74,14 +137,17 @@ width: 90%;
 
   .leistungen {
     padding: 20px;
+    margin-top: .2rem;
   }
 
   .hinweise {
     padding: 20px;
+    margin-top: .2rem;
   }
 
   .hotels {
     padding: 20px;
+    margin-top: .2rem;
   }
 
   .textDecoration {
