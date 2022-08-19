@@ -171,4 +171,9 @@ margin-bottom: 2rem;
       color: #fff;
       background-color: #41b083;
     }
+
+    .activ {
+      color: #41b083;
+      background-color: #fff;
+    }
   }
