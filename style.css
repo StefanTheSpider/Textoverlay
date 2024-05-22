@@ -34,10 +34,6 @@ hr {
   align-items: center;
 }
 
-.hidden {
-  display: none;
-}
-
 .blue {
   color: var(--Tix-Blue, #008EDE);
   font-family: Poppins;
