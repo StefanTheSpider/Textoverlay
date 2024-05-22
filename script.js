@@ -1,58 +1,66 @@
-'use strict'
+'use strict';
 
-const leistungenBtn = document.querySelector(`.li-1`);
-const hotelBtn = document.querySelector(`.li-2`);
-const hinweiseBtn = document.querySelector(`.li-3`);
+// Select elements for leistungen section
+const leistungenMehr = document.querySelector('.leistungen-mehr');
+const leistungenWeniger = document.querySelector('.leistungen-weniger');
+const leistungenTxt = document.querySelector('.leistungen');
 
-const leistungen = document.querySelector(`.leistungen`);
-const hotel = document.querySelector(`.hotels`);
-const hinweise = document.querySelector(`.hinweise`);
+// Select elements for hotelbeschreibung section
+const hotelbeschreibungMehr = document.querySelector('.hotelbeschreibung-mehr');
+const hotelbeschreibungWeniger = document.querySelector('.hotelbeschreibung-weniger');
+const hotelsTxt = document.querySelector('.hotels');
 
-const overlapL = function () {
-  leistungenBtn.classList.add(`textDecoration`);
-  leistungenBtn.classList.add(`activ`);
-  leistungen.classList.remove(`hidden`);
-  hotel.classList.add(`hidden`);
-  hotelBtn.classList.remove(`hidden`);
-  hotelBtn.classList.remove(`activ`);
-  hotelBtn.classList.remove(`textDecoration`);
-  hinweise.classList.add(`hidden`);
-  hinweiseBtn.classList.remove(`hidden`);
-  hinweiseBtn.classList.remove(`activ`);
-  hinweiseBtn.classList.remove(`textDecoration`);
+// Select elements for hinweise section
+const hinweiseMehr = document.querySelector('.hinweise-mehr');
+const hinweiseWeniger = document.querySelector('.hinweise-weniger');
+const hinweiseTxt = document.querySelector('.hinweise');
+
+// Toggle function for leistungen section
+function leistungen() {
+  leistungenMehr.toggleAttribute('hidden');
+  leistungenWeniger.toggleAttribute('hidden');
+  leistungenTxt.toggleAttribute('hidden');
 }
 
-const overlapHotel = function () {
-  leistungen.classList.add(`hidden`);
-  leistungenBtn.classList.remove(`textDecoration`);
-  leistungenBtn.classList.remove(`activ`);
-  hotelBtn.classList.add(`textDecoration`);
-  hotelBtn.classList.add(`activ`);
-  hotel.classList.remove(`hidden`);
-  hinweiseBtn.classList.remove(`textDecoration`);
-  hinweiseBtn.classList.remove(`activ`);
-  hinweise.classList.remove(`index`);
-  hinweise.classList.add(`hidden`);
+// Toggle function for hotelbeschreibung section
+function hotelbeschreibung() {
+  hotelbeschreibungMehr.toggleAttribute('hidden');
+  hotelbeschreibungWeniger.toggleAttribute('hidden');
+  hotelsTxt.toggleAttribute('hidden');
 }
 
-const overlapH = function () {
-  leistungen.classList.add(`hidden`);
-  leistungenBtn.classList.remove(`textDecoration`);
-  leistungenBtn.classList.remove(`activ`);
-  hotel.classList.remove(`index`);
-  hotel.classList.add(`hidden`);
-  hotelBtn.classList.remove(`textDecoration`);
-  hotelBtn.classList.remove(`activ`);
-  hinweise.classList.add(`index`);
-  hinweiseBtn.classList.add(`textDecoration`);
-  hinweiseBtn.classList.add(`activ`);
-  hinweise.classList.remove(`hidden`);
+// Toggle function for hinweise section
+function hinweise() {
+  hinweiseMehr.toggleAttribute('hidden');
+  hinweiseWeniger.toggleAttribute('hidden');
+  hinweiseTxt.toggleAttribute('hidden');
 }
 
-leistungenBtn.addEventListener(`click`, overlapL);
-hinweiseBtn.addEventListener(`click`, overlapH);
-hotelBtn.addEventListener(`click`, overlapHotel);
+// Add event listeners for leistungen section
+leistungenMehr.addEventListener('click', leistungen);
+leistungenWeniger.addEventListener('click', leistungen);
+leistungenTxt.addEventListener('click', leistungen);
 
+// Add event listeners for hotelbeschreibung section
+hotelbeschreibungMehr.addEventListener('click', hotelbeschreibung);
+hotelbeschreibungWeniger.addEventListener('click', hotelbeschreibung);
+hotelsTxt.addEventListener('click', hotelbeschreibung);
 
+// Add event listeners for hinweise section
+hinweiseMehr.addEventListener('click', hinweise);
+hinweiseWeniger.addEventListener('click', hinweise);
+hinweiseTxt.addEventListener('click', hinweise);
 
+// Initial setup to ensure one is shown and the other is hidden
+function initialSetup(showElement, hideElement, textElement) {
+  if (!showElement.hasAttribute('hidden') && !hideElement.hasAttribute('hidden')) {
+    showElement.setAttribute('hidden', true);
+  }
+  if (!textElement.hasAttribute('hidden')) {
+    textElement.setAttribute('hidden', true);
+  }
+}
 
+initialSetup(leistungenMehr, leistungenWeniger, leistungenTxt);
+initialSetup(hotelbeschreibungMehr, hotelbeschreibungWeniger, hotelsTxt);
+initialSetup(hinweiseMehr, hinweiseWeniger, hinweiseTxt);

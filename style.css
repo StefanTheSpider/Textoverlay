@@ -1,167 +1,52 @@
-.container-description {
-  width: 99%;
-  margin-left: auto;
-  margin-right: auto;
+.main-frame {
+  max-width: 140rem;
+  padding: 6rem 26rem;
+  margin-inline: auto;
 }
 
-.text-uberschrift {
-  font-size: 1.2rem;
+.gray {
+  background: var(--tix-white-30, #F7F7F7);
 }
 
-.leistungen, .hinweise, .hotels {
-  background: #fff;
+.h2-desktop {
+  
+  color: var(--Tix-Black, #272932);
+  font-family: Poppins;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3; /* 130% */
+  margin-top: 0;
+  margin-bottom: 4rem;
 }
 
-.menü-overlap {
-  /* width: 100%; */
-  margin: 0 auto;
-  padding: 0;
+hr {
+  width: 100%;
+  border: #272932 1px solid;
+  margin: 0;
+}
+
+/* neue css die global eingefügt werden muss */
+
+.description-element-container {
   display: flex;
-  list-style-type: none;
-}
-
-.menü-overlap>li {
-  width: 33%;
-  border: 1px solid #000;
-  border-bottom: #fff;
-  border-right: none;
-  text-align: center;
+  justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
-  padding: 1rem 2rem !important;
-  text-transform: uppercase;
-  /* position: relative */
 }
 
-.li-3 {
-  border-right: 1px solid #000 !important;
+.hidden {
+  display: none;
 }
 
-@media (max-width: 656px) {
-
-  .menü-overlap {
-    display: block;
-    text-align: center;
-    width: 90%;
-  }
-
-  .menü-overlap > li {
-width: 90%;
-  }
+.blue {
+  color: var(--Tix-Blue, #008EDE);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem; /* 150% */
+  cursor: pointer;
 }
 
-.background {
-  /* width: 99.9%; */
-  background-color: #F7F7F7;
-  position: relative;
-  border: 1px solid #000;
-  margin-left: auto;
-  margin-right: auto;
+[hidden] {
+  display: none;
 }
-
-  .leistung-aufzählung {
-    text-decoration: underline 2px #41b083;
-    text-underline-offset: 6px;
-    margin-right: 0.5rem;
-
-  }
-
-  .col-1 {
-    margin-bottom: 1.5rem;
-  }
-
-  .description-text {
-    margin: 30px;
-    padding: 20px;
-  }
-
-  .li-1 {
-    font-size: 2rem;
-  }
-
-  .li-1:hover {
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  .li-2:hover {
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  .li-3:hover {
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-
-  .leistungen {
-    padding: 20px;
-    margin-top: .2rem;
-  }
-
-  .hinweise {
-    padding: 20px;
-    margin-top: .2rem;
-  }
-
-  .hotels {
-    padding: 20px;
-    margin-top: .2rem;
-  }
-
-  .textDecoration {
-    font-weight: 500;
-    margin: 0;
-  }
-
-  .activ {
-    color: #fff;
-    background-color: #41b083;
-  }
-
-  @media (max-width: 656px) {
-    .leistungen>ul {
-      font-size: 12px;
-    }
-
-    .background {
-      width: 100%;
-    }
-
-    .menü-overlap {
-      margin: auto;
-    }
-
-    .menü-overlap>li {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      border: 2px solid #000;
-    }
-
-    .li-1,
-    .li-2,
-    .li-3 {
-      padding: 1rem;
-      margin-bottom: .5rem;
-      border: 2px solid #000;
-      text-decoration: none;
-      color: #fff;
-      background-color: #41b083;
-    }
-
-    .activ {
-      color: #41b083;
-      background-color: #fff;
-    }
-  }
-
-
-  .col-1 > li::marker{
-    
-  }
